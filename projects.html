@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Nada Hamitouche</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Barre de navigation -->
+   <nav class="navbar">
+ <button id="themeToggle" class="theme-btn">🌙</button>
+     
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="skills.html">Compétances</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html"class="active">Projets</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="right-section">
+     <div class="burger" id="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </div>
+  </nav>
+
+  <h2 class="projects">Mes Projets</h2>
+
+  <div class="projects-container">
+    <div class="project-card" data-project="qcmed">
+      <img src="images/qcmedproject.png" alt="QCMed">
+      <h3>QCMed</h3>
+      <p>Plateforme interactive de QCMs médicaux.</p>
+    </div>
+
+    <div class="project-card" data-project="portfolio">
+      <img src="images/portfolioprojcetpng.png" alt="Portfolio">
+      <h3>Portfolio Personnel</h3>
+      <p>Mon site web personnel avec un design moderne.</p>
+    </div>
+  </div>
+
+  <!-- POPUP -->
+  <div class="popup" id="popup2">
+    <div class="popup-content">
+      <span class="close-btn" id="closePopup2">&times;</span>
+      <h3 id="popupTitle"></h3>
+      <p id="popupDesc"></p>
+      <p class="tech" id="popupTech"></p>
+      <button id="popupBtn">Voir le projet</button>
+    </div>
+  </div>
+
+<!-- 🌍 Bouton langue -->
+  <!-- Sélecteur de langue -->
+<div class="lang-switch">
+  <button id="lang-btn">FR</button>
+  <div id="lang-menu" class="hidden">
+    <button data-lang="fr">Français</button>
+    <button data-lang="en">English</button>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>

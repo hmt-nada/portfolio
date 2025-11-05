@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Nada Hamitouche</title>
+  <link rel="stylesheet" href="style.css" />
+<!-- Font Awesome CDN -->
+
+</head>
+<body>
+  <!-- Barre de navigation -->
+  <nav class="navbar">
+ <button id="themeToggle" class="theme-btn">🌙</button>
+     
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="skills.html">Compétances</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projets</a>
+      <a href="contact.html"class="active">Contact</a>
+    </div>
+
+    <div class="right-section">
+     <div class="burger" id="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </div>
+  </nav>
+
+  <h2 class="section-title">Me Contacter</h2>
+<p class="sectionsoustitre">Vous avez une idée de projet ? Contactez-moi pour que nous collaborions et donnions vie à quelque chose d’extraordinaire.</p>
+<div class="contact-container">
+   <div class="contact-info">
+    <h3>Mes coordonnées</h3>
+    <p><i class="fas fa-phone"></i> +213 7 78 86 16 11</p>
+  <p><i class="fas fa-envelope"></i> on_hamitouche@esi.dz</p>
+  <p><i class="fas fa-map-marker-alt"></i> Algérie</p>
+  </div>
+  <!-- Formulaire -->
+  <form class="contact-form">
+    <label for="name">Nom</label>
+    <input type="text" id="name" placeholder="Votre nom" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Votre email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" rows="5" placeholder="Votre message..." required></textarea>
+
+    <button type="submit" class="btn">Envoyer</button>
+  </form>
+
+  <!-- Coordonnées -->
+ 
+</div>
+
+<!-- 🌍 Bouton langue -->
+  <!-- Sélecteur de langue -->
+<div class="lang-switch">
+  <button id="lang-btn">FR</button>
+  <div id="lang-menu" class="hidden">
+    <button data-lang="fr">Français</button>
+    <button data-lang="en">English</button>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>

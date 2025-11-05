@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Nada Hamitouche</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Barre de navigation -->
+  <nav class="navbar">
+ <button id="themeToggle" class="theme-btn">🌙</button>
+     
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="skills.html">Compétances</a>
+      <a href="services.html"class="active">Services</a>
+      <a href="projects.html">Projets</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="right-section">
+     <div class="burger" id="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </div>
+  </nav>
+<section class="services">
+  <h2 style="margin-top:-2.5rem;">Mes Services</h2>
+  <p class="intro-text">
+    J’aime transformer des idées en expériences numériques modernes.  
+    Que ce soit pour un site vitrine, une plateforme complète ou un design interactif  ,
+     je peux donner vie à votre projet de A à Z.
+  </p>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <i class="fa-solid fa-paintbrush"></i>
+      <h3>Design UI / UX</h3>
+      <p>
+        Création d’interfaces modernes et intuitives avec une attention particulière à l’expérience utilisateur.  
+        Conception sur Figma, respect des tendances et identité visuelle unique.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <i class="fa-solid fa-code"></i>
+      <h3>Développement Front-End</h3>
+      <p>
+        Intégration responsive et dynamique avec HTML, CSS et JavaScript.  
+        Je m’assure que chaque site soit fluide, esthétique et performant sur tous les écrans.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <i class="fa-solid fa-server"></i>
+      <h3>Développement Back-End</h3>
+      <p>
+        Création de serveurs robustes avec Node.js et bases de données SQLite.  
+        Gestion des utilisateurs, envoi d’e-mails et API sécurisées.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <i class="fa-solid fa-layer-group"></i>
+      <h3>Développement Full-Stack</h3>
+      <p>
+        Du design au déploiement : je développe des sites web complets et fonctionnels.  
+        Une maîtrise du front et du back pour des solutions personnalisées.
+      </p>
+    </div>
+  </div>
+</section>
+  
+<!-- 🌍 Bouton langue -->
+  <!-- Sélecteur de langue -->
+<div class="lang-switch">
+  <button id="lang-btn">FR</button>
+  <div id="lang-menu" class="hidden">
+    <button data-lang="fr">Français</button>
+    <button data-lang="en">English</button>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>

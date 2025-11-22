@@ -156,8 +156,9 @@ function setSkillsLanguage(lang) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+   const savedLang = localStorage.getItem("lang") || "fr";
   updateTooltips();
-  const savedLang = localStorage.getItem("lang") || "fr";
+ 
   setSkillsLanguage(savedLang);
   const cards = document.querySelectorAll(".skill-card");
 

@@ -156,20 +156,20 @@ function setSkillsLanguage(lang) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-   const savedLang = localStorage.getItem("lang") || "fr";
-  updateTooltips();
- 
-  setSkillsLanguage(savedLang);
-  const cards = document.querySelectorAll(".skill-card");
+    const savedLang = localStorage.getItem("lang") || "fr";
 
-  cards.forEach((card, i) => {
-    card.style.animationDelay = (i * 0.15) + "s";
-  });
-  const leftElement = document.querySelector(".slide-left");
+    // ⚡ Initialiser la page avec la langue correcte
+    setSkillsLanguage(savedLang);
 
-setTimeout(() => {
-  
-    leftElement.classList.add("slide-visible");
-  
-}, 200);
+    // Définir l'animation des cartes
+    const cards = document.querySelectorAll(".skill-card");
+    cards.forEach((card, i) => {
+        card.style.animationDelay = (i * 0.15) + "s";
+    });
+
+    const leftElement = document.querySelector(".slide-left");
+    setTimeout(() => {
+        leftElement.classList.add("slide-visible");
+    }, 200);
 });
+

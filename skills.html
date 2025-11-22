@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 <title>Portfolio - Nada Hamitouche</title>
+ <link rel="icon" href="images/portfolio-favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <link rel="stylesheet" href="style.css" />
@@ -35,86 +37,94 @@
   <div>
 
 <div class="skills-section">
-  <h3 style="margin-top:-3rem;">Mes Compétences</h3>
+  <h3 class="slide-left" style="margin-top:-3rem;">Mes Compétences</h3>
 
   <div class="skills-grid">
-    <div class="skill-card" data-info="J’ai utilisé HTML5 dans la création de plusieurs interfaces de mon portfolio et de mes projets web, en appliquant une structure claire et sémantique.">
+    <div class="skill-card" data-key="html" data-info="J’ai utilisé HTML5 dans la création de plusieurs interfaces de mon portfolio et de mes projets web, en appliquant une structure claire et sémantique.">
       <div class="icon"><i class="fa-brands fa-html5"></i></div>
-      <h3>HTML5</h3>
+      <h3>HTML</h3>
       <p>Structure et sémantique des pages web modernes.</p>
+      <div class="tooltip"></div>
     </div>
 
-    <div class="skill-card" data-info="J’utilise CSS3 pour rendre mes sites modernes, responsives et esthétiques, notamment grâce à Flexbox et Grid.">
+    <div class="skill-card" data-key="css" data-info="J’utilise CSS3 pour rendre mes sites modernes, responsives et esthétiques, notamment grâce à Flexbox et Grid.">
       <div class="icon"><i class="fa-brands fa-css3-alt"></i></div>
-      <h3>CSS3</h3>
+      <h3>CSS</h3>
       <p>Création d’interfaces modernes et responsives.</p>
+      <div class="tooltip"></div>
     </div>
 
-    <div class="skill-card" data-info="Avec JavaScript, j’ajoute des interactions dynamiques : validation de formulaires, animations, et logique de navigation.">
+    <div class="skill-card" data-key="js" data-info="Avec JavaScript, j’ajoute des interactions dynamiques : validation de formulaires, animations, et logique de navigation.">
       <div class="icon"><i class="fa-brands fa-js"></i></div>
       <h3>JavaScript</h3>
       <p>Interactions dynamiques et logique frontend.</p>
+      <div class="tooltip"></div>
     </div>
 
-    <div class="skill-card" data-info="Node.js me permet de développer des serveurs et API rapides, notamment pour la partie backend de mes projets.">
+    <div class="skill-card" data-key="node" data-info="Node.js me permet de développer des serveurs et API rapides, notamment pour la partie backend de mes projets.">
       <div class="icon"><i class="fa-brands fa-node-js"></i></div>
       <h3>Node.js</h3>
       <p>Développement côté serveur rapide et flexible.</p>
+      <div class="tooltip"></div>
     </div>
 
-    <div class="skill-card" data-info="J’utilise GitHub pour gérer mes projets, collaborer, et héberger le code source de mes applications.">
+    <div class="skill-card" data-key="git" 
+     data-info="J’utilise Git pour gérer les versions de mes projets, travailler avec des branches, fusionner du code et collaborer efficacement.">
+  <div class="icon"><i class="fa-brands fa-git-alt"></i></div>
+  <h3>Git</h3>
+  <p>Gestion de versions et travail collaboratif.</p>
+  <div class="tooltip"></div>
+</div>
+
+
+    <div class="skill-card" data-key="github" data-info="J’utilise GitHub pour gérer mes projets, collaborer, et héberger le code source de mes applications.">
       <div class="icon"><i class="fa-brands fa-github"></i></div>
       <h3>GitHub</h3>
       <p>Versioning et hébergement de code source.</p>
+      <div class="tooltip"></div>
     </div>
 
-    <div class="skill-card" data-info="Render me permet de déployer mes projets et mes sites statiques en ligne, gratuitement et facilement.">
+    <div class="skill-card" data-key="render" data-info="Render me permet de déployer mes projets et mes sites statiques en ligne, gratuitement et facilement.">
       <div class="icon"><i class="fa-solid fa-cloud"></i></div>
       <h3>Render</h3>
       <p>Déploiement et hébergement en ligne.</p>
+      <div class="tooltip"></div>
     </div>
 
-    <div class="skill-card" data-info="SQLite est la base de données que je l'utilise pour les minis projets afin de les tester localement. ">
+    <div class="skill-card" data-key="sqlite" data-info="SQLite est la base de données que je l'utilise pour les minis projets afin de les tester localement. ">
       <div class="icon"><i class="fa-solid fa-database"></i></div>
       <h3>SQLite</h3>
       <p>Base de données légère et rapide.</p>
+      <div class="tooltip"></div>
     </div>
 
-    <div class="skill-card" data-info="Le langage C m’a permis de renforcer ma logique algorithmique et de mieux comprendre la gestion mémoire et le fonctionnement bas niveau des systèmes.">
+    <div class="skill-card" data-key="postgresql" 
+     data-info="PostgreSQL est la base de données que j’utilise pour gérer, requêter et structurer des données de manière fiable et performante.">
+  <div class="icon"><i class="fa-solid fa-database"></i></div>
+  <h3>PostgreSQL</h3>
+  <p>Base de données robuste et performante.</p>
+  <div class="tooltip"></div>
+</div>
+
+    <div class="skill-card" data-key="c" data-info="Le langage C m’a permis de renforcer ma logique algorithmique et de mieux comprendre la gestion mémoire et le fonctionnement bas niveau des systèmes.">
       <div class="icon"><i class="fa-solid fa-code"></i></div>
       <h3>C</h3>
       <p>Langage bas niveau pour la logique et les performances.</p>
+      <div class="tooltip"></div>
     </div>
-    <div class="skill-card" data-info="J’utilise Figma pour concevoir des maquettes et prototyper l’interface de mes projets web avant le développement.">
-  <div class="icon"><i class="fa-brands fa-figma"></i></div>
-  <h3>Figma</h3>
-  <p>Conception d’interfaces et prototypage visuel.</p>
-</div>
+    <div class="skill-card" data-key="figma" data-info="J’utilise Figma pour concevoir des maquettes et prototyper l’interface de mes projets web avant le développement.">
+       <div class="icon"><i class="fa-brands fa-figma"></i></div>
+        <h3>Figma</h3>
+        <p>Conception d’interfaces et prototypage visuel.</p>
+        <div class="tooltip"></div>
+      </div>
 
   </div>
 </div>
 
-<!-- Popup d'explication -->
-<div id="popup" class="popup hidden">
-  <div class="popup-content">
-    <span id="close-popup">&times;</span>
-    <p id="popup-text"></p>
   </div>
-</div>
 
-
-
-
-  </div>
-<!-- 🌍 Bouton langue -->
-  <!-- Sélecteur de langue -->
-<div class="lang-switch">
-  <button id="lang-btn">FR</button>
-  <div id="lang-menu" class="hidden">
-    <button data-lang="fr">Français</button>
-    <button data-lang="en">English</button>
-  </div>
-</div>
-  <script src="script.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/skills.js"></script>
 </body>
 </html>

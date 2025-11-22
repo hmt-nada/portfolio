@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-  <title>Portfolio - Nada Hamitouche</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <title>Portfolio - Nada Hamitouche</title>
+  <link rel="icon" href="images/portfolio-favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
 <!-- Font Awesome CDN -->
 
@@ -32,19 +33,56 @@
     </div>
   </nav>
 
-  <h2 class="section-title">Me Contacter</h2>
-<p class="sectionsoustitre">Vous avez une idée de projet ? Contactez-moi pour que nous collaborions et donnions vie à quelque chose d’extraordinaire.</p>
+  <h2 class="section-title slide-left">Me Contacter</h2>
+<p class="sectionsoustitre slide-left">Vous avez une idée de projet ? Contactez-moi pour que nous collaborions et donnions vie à quelque chose d’extraordinaire.</p>
+<div id="successMessage" class="success-message" style="display:none;">
+  ✔️ Votre message a bien été envoyé ! Je vous répondrai dans les plus brefs délais.
+</div>
+
 <div class="contact-container">
-   <div class="contact-info">
+   <div class="contact-info card">
     <h3>Mes coordonnées</h3>
     <p><i class="fas fa-phone"></i> +213 7 78 86 16 11</p>
   <p><i class="fas fa-envelope"></i> on_hamitouche@esi.dz</p>
-  <p><i class="fas fa-map-marker-alt"></i> Algérie</p>
+  <p id="pays"><i class="fas fa-map-marker-alt"></i> <span id="pays-text">Algérie</span></p>
+
+  <!--icones-->
+<ul class="social-icons">
+  <li class="icon fb">
+    <a href="https://www.facebook.com/share/1K1Q6TrK4o/" target="_blank">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <span class="tooltip">Facebook</span>
+  </li>
+
+  <li class="icon ig">
+    <a href="https://www.instagram.com/hmt_nada?igsh=ZXNjMWVubHQwMnBr" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <span class="tooltip">Instagram</span>
+  </li>
+
+  <li class="icon li">
+    <a href="https://www.linkedin.com/in/hamitouche-nada-a05205328" target="_blank">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <span class="tooltip">LinkedIn</span>
+  </li>
+
+  <li class="icon gh">
+    <a href="https://github.com/hmt-nada" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+    <span class="tooltip">GitHub</span>
+  </li>
+</ul>
+
   </div>
   <!-- Formulaire -->
-  <form class="contact-form">
-    <label for="name">Nom</label>
+  <form class="contact-form card">
+    <label id="label-name" for="name">Nom</label>
     <input type="text" id="name" placeholder="Votre nom" required>
+
 
     <label for="email">Email</label>
     <input type="email" id="email" placeholder="Votre email" required>
@@ -52,22 +90,29 @@
     <label for="message">Message</label>
     <textarea id="message" rows="5" placeholder="Votre message..." required></textarea>
 
-    <button type="submit" class="btn">Envoyer</button>
+    
+    <button type="submit" class="btn">
+       <span class="btn-text">Envoyer</span>
+       <span class="loader"></span>
+    </button>
   </form>
 
   <!-- Coordonnées -->
  
 </div>
 
-<!-- 🌍 Bouton langue -->
-  <!-- Sélecteur de langue -->
-<div class="lang-switch">
-  <button id="lang-btn">FR</button>
-  <div id="lang-menu" class="hidden">
-    <button data-lang="fr">Français</button>
-    <button data-lang="en">English</button>
-  </div>
-</div>
-  <script src="script.js"></script>
+
+
+
+
+
+<script src="js/common.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("Lx_FliwYDBJFxCIbm"); 
+  })();
+</script>
 </body>
 </html>

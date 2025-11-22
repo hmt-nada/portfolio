@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Portfolio - Nada Hamitouche</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>Portfolio - Nada Hamitouche</title>
+   <link rel="icon" href="images/portfolio-favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="projects-page">
   <!-- Barre de navigation -->
    <nav class="navbar">
  <button id="themeToggle" class="theme-btn">🌙</button>
@@ -29,42 +32,67 @@
     </div>
   </nav>
 
-  <h2 class="projects">Mes Projets</h2>
+  <h2 id="bigtitle" class="projects slide-left">Mes Projets</h2>
 
   <div class="projects-container">
+
+<!----------------------------1st project--------------------------->
+
     <div class="project-card" data-project="qcmed">
+      <svg class="overlay-eye-icon"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="black" d="M6.4 19H8q.425 0 .713.288T9 20t-.288.713T8 21H4q-.425 0-.712-.288T3 20v-4q0-.425.288-.712T4 15t.713.288T5 16v1.6l2.4-2.4q.275-.275.7-.275t.7.275t.275.7t-.275.7zm11.2 0l-2.4-2.4q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l2.4 2.4V16q0-.425.288-.712T20 15t.713.288T21 16v4q0 .425-.288.713T20 21h-4q-.425 0-.712-.288T15 20t.288-.712T16 19zM5 6.4V8q0 .425-.288.713T4 9t-.712-.288T3 8V4q0-.425.288-.712T4 3h4q.425 0 .713.288T9 4t-.288.713T8 5H6.4l2.4 2.4q.275.275.275.7t-.275.7t-.7.275t-.7-.275zm14 0l-2.4 2.4q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7L17.6 5H16q-.425 0-.712-.287T15 4t.288-.712T16 3h4q.425 0 .713.288T21 4v4q0 .425-.288.713T20 9t-.712-.288T19 8z"/></svg> <!-- icône -->
       <img src="images/qcmedproject.png" alt="QCMed">
-      <h3>QCMed</h3>
-      <p>Plateforme interactive de QCMs médicaux.</p>
-    </div>
+      <h3 class="name">QCMed</h3>
+      <p class="domaine">Plateforme interactive de QCMs médicaux.</p>
+     <!-- Overlay hover -->
+    <div class="project-overlay">   
 
+<p><strong>Technologies :</strong> 
+  <span class="tech">HTML</span>
+  <span class="tech">CSS</span>
+  <span class="tech">JS</span>
+  <span class="tech">Node.js</span>
+  <span class="tech">Postgre-Sql</span>
+  <span class="tech">Render</span>
+  <span class="tech">Sendgrid</span>
+</p>
+
+      <p class="role"><strong>Rôle :</strong>Développement Full-Stack complet</p>
+      <p class="status"><strong>Statut :</strong> En cours de réalisation/ Phase de test</p>
+      <a  href="#" class="btn-disabled voir">Voir le projet</a>
+    </div>
+    </div>
+<!------------------------------2nd project--------------------------------->
     <div class="project-card" data-project="portfolio">
-      <img src="images/portfolioprojcetpng.png" alt="Portfolio">
-      <h3>Portfolio Personnel</h3>
-      <p>Mon site web personnel avec un design moderne.</p>
-    </div>
-  </div>
+      <svg class="overlay-eye-icon"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="black" d="M6.4 19H8q.425 0 .713.288T9 20t-.288.713T8 21H4q-.425 0-.712-.288T3 20v-4q0-.425.288-.712T4 15t.713.288T5 16v1.6l2.4-2.4q.275-.275.7-.275t.7.275t.275.7t-.275.7zm11.2 0l-2.4-2.4q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l2.4 2.4V16q0-.425.288-.712T20 15t.713.288T21 16v4q0 .425-.288.713T20 21h-4q-.425 0-.712-.288T15 20t.288-.712T16 19zM5 6.4V8q0 .425-.288.713T4 9t-.712-.288T3 8V4q0-.425.288-.712T4 3h4q.425 0 .713.288T9 4t-.288.713T8 5H6.4l2.4 2.4q.275.275.275.7t-.275.7t-.7.275t-.7-.275zm14 0l-2.4 2.4q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7L17.6 5H16q-.425 0-.712-.287T15 4t.288-.712T16 3h4q.425 0 .713.288T21 4v4q0 .425-.288.713T20 9t-.712-.288T19 8z"/></svg> <!-- icône -->
+      <img src="images/portfolio-accueil.png" alt="Portfolio">
+      <h3 class="name">Portfolio Personnel</h3>
+      <p class="domaine">Mon site web personnel avec un design moderne.</p>
+    <div class="project-overlay">
 
-  <!-- POPUP -->
-  <div class="popup" id="popup2">
-    <div class="popup-content">
-      <span class="close-btn" id="closePopup2">&times;</span>
-      <h3 id="popupTitle"></h3>
-      <p id="popupDesc"></p>
-      <p class="tech" id="popupTech"></p>
-      <button id="popupBtn">Voir le projet</button>
-    </div>
-  </div>
+<p><strong>Technologies :</strong> 
+  <span class="tech">HTML</span>
+  <span class="tech">CSS</span>
+  <span class="tech">JS</span>
+</p>
 
-<!-- 🌍 Bouton langue -->
-  <!-- Sélecteur de langue -->
-<div class="lang-switch">
-  <button id="lang-btn">FR</button>
-  <div id="lang-menu" class="hidden">
-    <button data-lang="fr">Français</button>
-    <button data-lang="en">English</button>
+      <p class="role"><strong>Rôle :</strong> Développement front-end complet</p>
+      <p class="status"><strong>Statut :</strong> Terminé</p>
+      <a  href="index.html" class="btn voir">Voir le projet</a>
+    </div>
+
+    </div>
+<!---------------------------------------------------------->
+  </div>
+<!-- Modal pour screenshots -->
+<div id="projectModal" class="modal">
+  <span class="close">&times;</span>
+  <div class="modal-content">
+    <div class="modal-images"></div>
   </div>
 </div>
-  <script src="script.js"></script>
+
+
+<script src="js/common.js"></script>
+  <script src="js/projects.js"></script>
 </body>
 </html>

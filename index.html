@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <title>Portfolio - Nada Hamitouche</title>
+   <link rel="icon" href="images/portfolio-favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -30,12 +32,16 @@
   </nav>
 
   <main class="content">
-   <img src="images/portfolioimage1.jpg" class="image">
+   <img src="images/portfolioimage1.jpg" class="image slide-left">
 
   
-<div class="intro">
-    <h1>Bienvenue sur mon Portfolio</h1>
-    <p>Je suis Nada Hamitouche, étudiante en informatique.</p>
+<div class="intro slide-right">
+    <h1></h1>
+    <p>
+      <span class="static">Je suis </span>
+      <span id="typing"></span>
+      <span class="cursor">|</span>
+    </p>
    </div>
   </main>
   
@@ -48,7 +54,6 @@
     <button data-lang="en">English</button>
   </div>
 </div>
-
-  <script src="script.js"></script>
+  <script src="js/index.js"></script>  
 </body>
 </html>

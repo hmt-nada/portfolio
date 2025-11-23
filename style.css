@@ -187,7 +187,7 @@ main {
   }
 
   .intro h1 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 
   .image {
@@ -312,7 +312,7 @@ box-shadow: 0 0 30px rgba(187, 134, 252, 0.4);
   font-weight: 700;
   color: #bb86fc;
   margin-bottom: 1rem;
-  letter-spacing: 1px;
+  letter-spacing: 1px; 
 }
 .highlight-name {
   

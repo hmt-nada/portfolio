@@ -187,10 +187,11 @@ main {
   }
 
   .intro h1 {
-    font-size: 1rem;       /* ajuste selon la taille de l'écran */
-    line-height: 1.2;      /* resserre un peu les lignes */
-    letter-spacing: 0.5px;
-    white-space: nowrap;    /* permet de casser le texte */
+    font-size: 1rem;
+  line-height: 1.2;
+  white-space: normal;      /* permet les retours à la ligne */
+  word-break: break-word;    /* coupe le texte si trop long */
+  text-align: center;        /* pour que ce soit centré */
   }
 
   .image {
@@ -215,11 +216,14 @@ main {
     align-items: center;
   }
 }
+
 @media (max-width: 480px) {
   .intro h1 {
-    font-size: 1rem;     /* beaucoup plus petit pour téléphone */
-    line-height: 1.2;
-    white-space: nowrap;    /* permet retour à la ligne si nécessaire */
+     font-size: 1rem;
+  line-height: 1.2;
+  white-space: normal;      /* permet les retours à la ligne */
+  word-break: break-word;    /* coupe le texte si trop long */
+  text-align: center;        /* pour que ce soit centré */
   }
   .intro {
     max-width: 95%; /* presque full width */

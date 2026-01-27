@@ -1002,7 +1002,9 @@ box-shadow: 0 0 30px rgba(187, 134, 252, 0.4);
 
 @media (max-width: 480px) {
   .intro h1 {
-    font-size: 1.5rem;
-    
+    font-size: 1.5rem;   
+  }
+  .intro {
+    max-width: 95%; /* presque full width */
   }
 }

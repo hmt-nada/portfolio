@@ -188,6 +188,7 @@ main {
 
   .intro h1 {
     font-size: 1.8rem;
+    white-space: nowrap;
   }
 
   .image {
@@ -988,6 +989,9 @@ box-shadow: 0 0 30px rgba(187, 134, 252, 0.4);
   opacity: 1;
   transform: translateX(-50%) translateY(4px);
 }
+
+/*responsive*/
+
 @media (max-width: 768px) {
   .intro h1 {
     font-size: 1.8rem;
@@ -999,5 +1003,6 @@ box-shadow: 0 0 30px rgba(187, 134, 252, 0.4);
 @media (max-width: 480px) {
   .intro h1 {
     font-size: 1.5rem;
+    
   }
 }

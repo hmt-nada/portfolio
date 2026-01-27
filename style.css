@@ -182,15 +182,12 @@ main {
     padding: 3rem 1.5rem;
   }
 
-  .intro {
-    max-width: 90%;
-  }
-
   .intro h1 {
-    font-size: 1rem;
+  
   margin:0 auto;
   white-space: normal;      /* permet les retours à la ligne */
   text-align: center;        /* pour que ce soit centré */
+
   }
 
   .image {
@@ -222,12 +219,12 @@ main {
   margin:0 auto;
   white-space: normal;      /* permet les retours à la ligne */
   text-align: center;        /* pour que ce soit centré */
+  
+  font-weight: 700;       /* garde ton style gras si tu veux */
+               /* supprime tout décalage par défaut */
+  line-height: 1.2;
   }
-  .intro {
-    max-width: 95%; /* presque full width */
-    margin: 0 auto;
-    text-align: center;
-  }
+   
   .image {
     width: 250px;
     height: 250px;
@@ -334,11 +331,12 @@ box-shadow: 0 0 30px rgba(187, 134, 252, 0.4);
 }
 
 .intro h1 {
-  font-size: 3rem;
   font-weight: 700;
   color: #bb86fc;
   margin-bottom: 1rem;
   letter-spacing: 1px; 
+  font-size: clamp(2rem, 5vw, 3rem);
+  
 }
 .highlight-name {
   
@@ -350,7 +348,7 @@ box-shadow: 0 0 30px rgba(187, 134, 252, 0.4);
 
 /* Texte statique "Je suis" */
 .intro .static {
-  font-size: 1.8rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.6;
   font-weight: 500;
   color: #a0a0a0; /* gris clair, subtil */
@@ -358,7 +356,7 @@ box-shadow: 0 0 30px rgba(187, 134, 252, 0.4);
 }
 /* Roles animés */
 #typing {
-  font-size: 1.9rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
   color: #ae79bc; /* rose doux qui ressort */
 }

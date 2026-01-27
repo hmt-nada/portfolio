@@ -1006,5 +1006,7 @@ box-shadow: 0 0 30px rgba(187, 134, 252, 0.4);
   }
   .intro {
     max-width: 95%; /* presque full width */
+     margin: 0 auto;
+    text-align: center;
   }
 }

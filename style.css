@@ -215,7 +215,7 @@ main {
 }
 @media (max-width: 480px) {
   .intro h1 {
-    font-size: 2rem;   
+    font-size: 1.8rem;   
   }
   .intro {
     max-width: 95%; /* presque full width */

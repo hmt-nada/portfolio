@@ -187,7 +187,7 @@ main {
   }
 
   .intro h1 {
-    font-size: 2rem;       /* ajuste selon la taille de l'écran */
+    font-size: 1.5rem;       /* ajuste selon la taille de l'écran */
     line-height: 1.2;      /* resserre un peu les lignes */
     letter-spacing: 0.5px;
     white-space: normal;    /* permet de casser le texte */

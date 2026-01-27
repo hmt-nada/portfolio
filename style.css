@@ -227,6 +227,10 @@ main {
     height: 250px;
     margin-top: 2rem;
   }
+  .nav-links a {
+    padding: 10px;
+    text-align: center;
+  }
 }
 /* Position du bouton */
 .lang-switch {

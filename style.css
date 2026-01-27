@@ -188,7 +188,7 @@ main {
 
   .intro h1 {
     font-size: 1rem;
-  line-height: 1.2;
+  
   white-space: normal;      /* permet les retours à la ligne */
   text-align: center;        /* pour que ce soit centré */
   }
@@ -218,8 +218,8 @@ main {
 
 @media (max-width: 480px) {
   .intro h1 {
-     font-size: 1rem;
-  line-height: 1.2;
+  font-size: 1rem;
+  
   white-space: normal;      /* permet les retours à la ligne */
   text-align: center;        /* pour que ce soit centré */
   }

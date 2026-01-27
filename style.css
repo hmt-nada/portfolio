@@ -190,7 +190,7 @@ main {
 
   }
 .intro{
-  margin:0;
+  margin-left:-10px;
 }
   .image {
     width: 250px;
@@ -227,7 +227,7 @@ main {
   line-height: 1.2;
   }
   .intro{
-  margin:0;
+  text-align: center;
 }
    
   .image {
@@ -361,7 +361,7 @@ box-shadow: 0 0 30px rgba(187, 134, 252, 0.4);
 }
 /* Roles animés */
 #typing {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.8rem, 5vw, 3rem);
   font-weight: 800;
   color: #ae79bc; /* rose doux qui ressort */
 }

@@ -213,6 +213,21 @@ main {
     align-items: center;
   }
 }
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 2rem;   
+  }
+  .intro {
+    max-width: 95%; /* presque full width */
+     margin: 0 auto;
+    text-align: center;
+  }
+  .image {
+    width: 250px;
+    height: 250px;
+    margin-top: 2rem;
+  }
+}
 /* Position du bouton */
 .lang-switch {
   position: fixed;
@@ -990,23 +1005,6 @@ box-shadow: 0 0 30px rgba(187, 134, 252, 0.4);
   transform: translateX(-50%) translateY(4px);
 }
 
-/*responsive*/
 
-@media (max-width: 768px) {
-  .intro h1 {
-    font-size: 1.8rem;
-    line-height: 1.3;
-    letter-spacing: 0.5px;
-  }
-}
 
-@media (max-width: 480px) {
-  .intro h1 {
-    font-size: 2rem;   
-  }
-  .intro {
-    max-width: 95%; /* presque full width */
-     margin: 0 auto;
-    text-align: center;
-  }
-}
+

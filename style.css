@@ -189,7 +189,9 @@ main {
   text-align: center;        /* pour que ce soit centré */
 
   }
-
+.intro{
+  margin:0;
+}
   .image {
     width: 250px;
     height: 250px;
@@ -224,6 +226,9 @@ main {
                /* supprime tout décalage par défaut */
   line-height: 1.2;
   }
+  .intro{
+  margin:0;
+}
    
   .image {
     width: 250px;

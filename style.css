@@ -187,7 +187,7 @@ main {
   }
 
   .intro h1 {
-    font-size: 1.5rem;       /* ajuste selon la taille de l'écran */
+    font-size: 1rem;       /* ajuste selon la taille de l'écran */
     line-height: 1.2;      /* resserre un peu les lignes */
     letter-spacing: 0.5px;
     white-space: nowrap;    /* permet de casser le texte */
@@ -217,7 +217,7 @@ main {
 }
 @media (max-width: 480px) {
   .intro h1 {
-    font-size: 1.5rem;     /* beaucoup plus petit pour téléphone */
+    font-size: 1rem;     /* beaucoup plus petit pour téléphone */
     line-height: 1.2;
     white-space: nowrap;    /* permet retour à la ligne si nécessaire */
   }

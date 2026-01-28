@@ -4,118 +4,149 @@ const skillsTexts = {
     html: {
       title: "HTML",
       desc: "Structure et sémantique des pages web modernes.",
-      popup: "J’ai utilisé HTML dans plusieurs interfaces..."
+      popup: "Balises sémantiques et structure claire."
     },
     css: {
       title: "CSS",
       desc: "Création d’interfaces modernes et responsives.",
-      popup: "J’utilise CSS pour rendre mes sites modernes..."
+      popup: "Flexbox, Grid et responsive design."
+    },
+    tailwind: {
+      title: "Tailwind CSS",
+      desc: "Framework CSS utilitaire et responsive.",
+      popup: "Design rapide grâce aux classes utilitaires."
     },
     js: {
       title: "JavaScript",
       desc: "Interactions dynamiques et logique frontend.",
-      popup: "Avec JavaScript, j’ajoute des interactions..."
+      popup: "Manipulation du DOM et logique interactive."
+    },
+     react: {
+      title: "React",
+      desc: "Interfaces dynamiques basées sur des composants.",
+      popup: "Composants réutilisables et gestion d’état."
+    },
+    nextjs: {
+      title: "Next.Js",
+      desc: "Framework React pour applications performantes.",
+      popup: "Rendu côté serveur et routing intégré."
     },
     node: {
       title: "Node.js",
       desc: "Développement côté serveur rapide et flexible.",
-      popup: "Node.js me permet de développer des API..."
+      popup: "Création d’API backend avec JavaScript."
     },
     git: {
      title: "Git",
      desc: "Gestion de versions et travail collaboratif.",
-     popup: "J’utilise Git pour gérer les versions de mes projets, travailler avec des branches, fusionner du code et collaborer efficacement."
+     popup: "Branches, commits et workflow propre."
      
     },
     github: {
       title: "GitHub",
       desc: "Versioning et hébergement de code source.",
-      popup: "J’utilise GitHub pour gérer mes projets..."
+      popup: "Collaboration et gestion de projets."
     },
     render: {
       title: "Render",
       desc: "Déploiement et hébergement en ligne.",
-      popup: "Render me permet de déployer mes projets..."
+      popup: "Déploiement simple d’applications web."
     },
     sqlite: {
       title: "SQLite",
       desc: "Base de données légère et rapide.",
-      popup: "SQLite est la base de données que j'utilise..."
+      popup: "Base locale pour projets et tests."
     },
     postgresql: {
       title: "PostgreSQL",
       desc: "Base de données robuste et performante.",
-      popup: "PostgreSQL est la base de données que j’utilise pour gérer, requêter et structurer des données de manière fiable et performante."
+      popup: "Gestion fiable des données relationnelles."
     },
     c: {
       title: "C",
       desc: "Langage bas niveau pour la logique et les performances.",
-      popup: "Le langage C m’a permis de renforcer ma logique..."
+      popup: "Mémoire, pointeurs et logique bas niveau."
     },
     figma: {
       title: "Figma",
       desc: "Conception d’interfaces et prototypage visuel.",
-      popup: "J’utilise Figma pour concevoir des maquettes..."
+      popup: "Maquettes UI avant développement."
     }
   },
 
   en: {
     bigtitle:"My Skills",
+
     html: {
       title: "HTML",
       desc: "Structure and semantics of modern web pages.",
-      popup: "I used HTML to build several interfaces..."
+      popup: "Semantic tags and clean structure."
     },
     css: {
       title: "CSS",
       desc: "Modern and responsive UI design.",
-      popup: "I use CSS to make my sites modern..."
+      popup: "Flexbox, Grid and responsive layouts."
+    },
+     tailwind: {
+      title: "Tailwind CSS",
+      desc: "Utility-first and responsive CSS framework.",
+      popup: "Fast styling with utility classes."
     },
     js: {
       title: "JavaScript",
       desc: "Dynamic interactions and frontend logic.",
-      popup: "With JavaScript, I add dynamic interactions..."
+      popup: "DOM manipulation and interactive logic."
+    },
+    react: {
+     title: "React",
+     desc: "Component-based dynamic interfaces.",
+     popup: "Reusable components and state management."
+    },
+    nextjs: {
+     title: "Next.js",
+     desc: "React framework for high-performance apps.",
+     popup: "Server-side rendering and routing."
     },
     node: {
       title: "Node.js",
       desc: "Fast and flexible server-side development.",
-      popup: "Node.js allows me to build servers and APIs..."
+      popup: "Backend APIs with JavaScript."
     },
     git: {
      title: "Git",
       desc: "Version control and collaborative work.",
-      popup: "I use Git to manage project versions, work with branches, merge code, and collaborate efficiently."
+      popup: "Branches, commits and clean workflow."
      
     },
     github: {
       title: "GitHub",
       desc: "Version control and code hosting.",
-      popup: "I use GitHub to manage and host my projects..."
+      popup: "Project hosting and collaboration."
     },
     render: {
       title: "Render",
       desc: "Deployment and online hosting.",
-      popup: "Render allows me to deploy my projects easily..."
+      popup: "Easy web app deployment."
     },
     sqlite: {
       title: "SQLite",
       desc: "Lightweight and fast database.",
-      popup: "SQLite is the database I use for small projects..."
+      popup: "Local database for testing."
     },
     postgresql: {
       title: "PostgreSQL",
       desc: "Robust and high-performance database.",
-      popup: "PostgreSQL is the database I use to manage, query, and structure data reliably and efficiently."
+      popup: "Reliable relational data management."
     },
     c: {
       title: "C",
       desc: "Low-level language for logic and performance.",
-      popup: "The C language helped me improve my algorithmic thinking..."
+      popup: "Memory management and low-level logic."
     },
     figma: {
       title: "Figma",
       desc: "UI design and visual prototyping.",
-      popup: "I use Figma to design mockups for my web projects..."
+      popup: "UI mockups before development."
     }
   }
 };
@@ -156,6 +187,7 @@ function setSkillsLanguage(lang) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+  
     const savedLang = localStorage.getItem("lang") || "fr";
 
     // ⚡ Initialiser la page avec la langue correcte

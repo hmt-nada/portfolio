@@ -1,7 +1,7 @@
 // Texte et langue
 const texts = {
   fr: {
-    title: 'Me Contacter',
+    title: 'ME CONTACTER',
     intro: "Vous avez une idée de projet ? Contactez-moi pour que nous collaborions et donnions vie à quelque chose d’extraordinaire.",
     cord:"Mes coordonnées",
     notif:"✔️ Votre message a bien été envoyé ! Je vous répondrai dans les plus brefs délais.",
@@ -10,7 +10,7 @@ const texts = {
     envoyer:"Envoyer",
   },
   en: {
-    title: "Contact Me",
+    title: "CONTACT ME",
     intro:"Do you have a project idea? Contact me so we can collaborate and bring something extraordinary to life.",
     cord:"My Contact Information",
     notif:"✔️ Your message has been successfully sent! I will get back to you as soon as possible.",

@@ -1,4 +1,4 @@
-document.querySelector('.theme-btn').style.visibility = "hidden";
+
 
 document.addEventListener("DOMContentLoaded", () => {
   
@@ -32,7 +32,7 @@ function safeTimeout(fn, delay) {
   // Sélecteurs
   const burger = document.getElementById("burger");
   const navLinks = document.getElementById("navLinks");
-  const themeToggle = document.getElementById("themeToggle");
+  
   const langBtn = document.getElementById("lang-btn");
   const langMenu = document.getElementById("lang-menu");
 let roleIndex = 0;
@@ -46,6 +46,7 @@ let isDeleting = false;
       navAccueil: "Accueil",
       navApropos: "À propos",
       navSkills: "Compétances",
+      navcertificat: "Certificats",
       navproject: "Projets",
     },
     en: {
@@ -54,6 +55,7 @@ let isDeleting = false;
       navAccueil: "Home",
       navApropos: "About",
       navSkills: "Skills",
+      navcertificat: "Certificates",
       navproject: "Projects",
     }
   };
@@ -65,6 +67,7 @@ let isDeleting = false;
     document.querySelector('a[href="apropos.html"]').textContent = texts[lang].navApropos;
     document.querySelector('a[href="skills.html"]').textContent = texts[lang].navSkills;
     document.querySelector('a[href="projects.html"]').textContent = texts[lang].navproject;
+    document.querySelector('a[href="certificats.html"]').textContent = texts[lang].navcertificat;
     roles = rolesByLang[lang]; // <-- mise à jour dynamique
   clearAllTimeouts();  //STOP ANIMATION
   roleIndex = 0;    // recommencer depuis le premier rôle
@@ -85,17 +88,7 @@ let isDeleting = false;
     burger.classList.toggle("active");
   });
 
-  // --- Mode sombre / clair ---
-  themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
-    if (document.body.classList.contains("light-mode")) {
-      themeToggle.textContent = "🌞";
-      localStorage.setItem("theme", "light");
-    } else {
-      themeToggle.textContent = "🌙";
-      localStorage.setItem("theme", "dark");
-    }
-  });
+  
 
   // --- Gestion langue ---
   langBtn.addEventListener("click", () => {
@@ -119,15 +112,8 @@ let isDeleting = false;
     }
   });
 
-  // --- Appliquer le thème sauvegardé ---
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "light") {
-    document.body.classList.add("light-mode");
-    themeToggle.textContent = "🌞";
-  } else {
-    document.body.classList.remove("light-mode");
-    themeToggle.textContent = "🌙";
-  }
+ 
+  
   
  const el = document.getElementById('typing');
 const cursor = document.querySelector('.cursor');

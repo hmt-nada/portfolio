@@ -4,14 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <title>Portfolio - Nada Hamitouche</title>
    <link rel="icon" href="images/portfolio-favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="projects-page">
+<body>
   <!-- Barre de navigation -->
-   <nav class="navbar">
+  <nav class="navbar">
  
      
     <div class="nav-links" id="navLinks">
@@ -19,8 +18,8 @@
       <a href="apropos.html">À propos</a>
       <a href="skills.html">Compétances</a>
       <a href="services.html">Services</a>
-      <a href="projects.html"class="active">Projets</a>
-      <a href="certificats.html">Certificats</a>
+      <a href="projects.html">Projets</a>
+      <a href="certificats.html"class="active">Certificats</a>
       <a href="contact.html">Contact</a>
     </div>
 
@@ -32,57 +31,38 @@
       </div>
     </div>
   </nav>
-<div class="projects-background">
-  <h2 id="bigtitle" class="projects slide-left">Mes Projets</h2>
+
+  <div class="certificats">
+    
+ <h2 id="bigtitle" class="projects slide-left">Mes Certificats</h2>
 
   <div class="projects-container">
 
-<!----------------------------1st project--------------------------->
+<!----------------------------1st certificate--------------------------->
 
-    <div class="project-card" data-project="qcmed">
+    <div class="certificat-card" data-project="skillboost">
       <svg class="overlay-eye-icon"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="black" d="M6.4 19H8q.425 0 .713.288T9 20t-.288.713T8 21H4q-.425 0-.712-.288T3 20v-4q0-.425.288-.712T4 15t.713.288T5 16v1.6l2.4-2.4q.275-.275.7-.275t.7.275t.275.7t-.275.7zm11.2 0l-2.4-2.4q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l2.4 2.4V16q0-.425.288-.712T20 15t.713.288T21 16v4q0 .425-.288.713T20 21h-4q-.425 0-.712-.288T15 20t.288-.712T16 19zM5 6.4V8q0 .425-.288.713T4 9t-.712-.288T3 8V4q0-.425.288-.712T4 3h4q.425 0 .713.288T9 4t-.288.713T8 5H6.4l2.4 2.4q.275.275.275.7t-.275.7t-.7.275t-.7-.275zm14 0l-2.4 2.4q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7L17.6 5H16q-.425 0-.712-.287T15 4t.288-.712T16 3h4q.425 0 .713.288T21 4v4q0 .425-.288.713T20 9t-.712-.288T19 8z"/></svg> <!-- icône -->
-      <img src="images/qcmedproject.png" alt="QCMed">
-      <h3 class="name">QCMed</h3>
-      <p class="domaine">Plateforme interactive de QCMs médicaux pour faciliter l’apprentissage et l’évaluation continue des étudiants en médecine.</p>
+      <img src="images/SKILLBOOST.png" alt="QCMed">
+      <h3 class="name">SillBoost-Certificat</h3>
+      
      <!-- Overlay hover -->
     <div class="project-overlay">   
-
-<p><strong>Technologies :</strong> 
-  <span class="tech">HTML</span>
-  <span class="tech">CSS</span>
-  <span class="tech">JS</span>
-  <span class="tech">Node.js</span>
-  <span class="tech">Postgre-Sql</span>
-  <span class="tech">Render</span>
-  <span class="tech">Sendgrid</span>
-</p>
-
+      <p class="domaine">Formation pratique en développement web avec Django, réalisée lors de l’événement SkillBoost organisé par le club scientifique CSE. Cette formation m’a permis d’acquérir les bases du framework Django, notamment la création d’applications web, la gestion des bases de données et l’implémentation de fonctionnalités côté serveur.</p>
       <p class="role"><strong>Rôle :</strong>Développement Full-Stack complet, intégration de la base de données et gestion des fonctionnalités interactives</p>
-      <div class="project-buttons">
-      <a href="#" class="btn-disabled voir">Voir le projet</a>
-      <a href="https://github.com/votre-utilisateur/qcmed" target="_blank" class="btn github">GitHub</a>
+      
     </div>
     </div>
-    </div>
-<!------------------------------2nd project--------------------------------->
-    <div class="project-card" data-project="portfolio">
+
+<!------------------------------2nd certificat--------------------------------->
+    <div class="certificat-card" data-project="esms">
       <svg class="overlay-eye-icon"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="black" d="M6.4 19H8q.425 0 .713.288T9 20t-.288.713T8 21H4q-.425 0-.712-.288T3 20v-4q0-.425.288-.712T4 15t.713.288T5 16v1.6l2.4-2.4q.275-.275.7-.275t.7.275t.275.7t-.275.7zm11.2 0l-2.4-2.4q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l2.4 2.4V16q0-.425.288-.712T20 15t.713.288T21 16v4q0 .425-.288.713T20 21h-4q-.425 0-.712-.288T15 20t.288-.712T16 19zM5 6.4V8q0 .425-.288.713T4 9t-.712-.288T3 8V4q0-.425.288-.712T4 3h4q.425 0 .713.288T9 4t-.288.713T8 5H6.4l2.4 2.4q.275.275.275.7t-.275.7t-.7.275t-.7-.275zm14 0l-2.4 2.4q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7L17.6 5H16q-.425 0-.712-.287T15 4t.288-.712T16 3h4q.425 0 .713.288T21 4v4q0 .425-.288.713T20 9t-.712-.288T19 8z"/></svg> <!-- icône -->
-      <img src="images/portfolio-accueil.png" alt="Portfolio">
-      <h3 class="name">Portfolio Personnel</h3>
-      <p class="domaine">Mon portfolio personnel, conçu pour présenter mes projets et compétences avec un design moderne et responsive, optimisé pour une navigation fluide.</p>
+      <img src="images/ESMS.png" alt="Portfolio">
+      <h3 class="name">ESMS-Certificat</h3>
+      
     <div class="project-overlay">
-
-<p><strong>Technologies :</strong> 
-  <span class="tech">HTML</span>
-  <span class="tech">CSS</span>
-  <span class="tech">JS</span>
-</p>
-
+      <p class="domaine">Certificat de participation à l’événement ESMS organisé par le club scientifique CSE. Ce programme collaboratif d’une durée d’un mois simulait un environnement professionnel réel, où chaque participant occupait un rôle spécifique au sein d’un département. J’ai intégré le département développement et participé activement à la réalisation d’un projet en équipe.</p>
       <p class="role"><strong>Rôle :</strong> Développement front-end complet, design UX/UI et intégration responsive.</p>
-       <div class="project-buttons">
-      <a href="index.html" class="btn voir">Voir le projet</a>
-      <a href="https://github.com/votre-utilisateur/portfolio" target="_blank" class="btn github">GitHub</a>
-    </div>
+       
     </div>
 
     </div>
@@ -91,13 +71,16 @@
 <!-- Modal pour screenshots -->
 <div id="projectModal" class="modal">
   <span class="close">&times;</span>
-  <div class="modal-content">
+  <div class="modal-content-cert">
     <div class="modal-images"></div>
   </div>
 </div>
 </div>
 
-<script src="js/common.js"></script>
-  <script src="js/projects.js"></script>
+
+ </div>
+  
+  <script src="js/common.js"></script>  
+  <script src="js/certificats.js"></script>  
 </body>
 </html>

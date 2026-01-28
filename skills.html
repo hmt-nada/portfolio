@@ -14,7 +14,6 @@
 <body style=" overflow: auto;">
   <!-- Barre de navigation -->
    <nav class="navbar">
- <button id="themeToggle" class="theme-btn">🌙</button>
      
     <div class="nav-links" id="navLinks">
       <a href="index.html">Accueil</a>
@@ -22,6 +21,7 @@
       <a href="skills.html"class="active">Compétances</a>
       <a href="services.html">Services</a>
       <a href="projects.html">Projets</a>
+      <a href="certificats.html">Certificats</a>
       <a href="contact.html">Contact</a>
     </div>
 
@@ -40,79 +40,102 @@
   <h3 class="slide-left" style="margin-top:-3rem;">Mes Compétences</h3>
 
   <div class="skills-grid">
-    <div class="skill-card" data-key="html" data-info="J’ai utilisé HTML5 dans la création de plusieurs interfaces de mon portfolio et de mes projets web, en appliquant une structure claire et sémantique.">
+
+    <div class="skill-card" data-key="html">
       <div class="icon"><i class="fa-brands fa-html5"></i></div>
       <h3>HTML</h3>
       <p>Structure et sémantique des pages web modernes.</p>
       <div class="tooltip"></div>
     </div>
 
-    <div class="skill-card" data-key="css" data-info="J’utilise CSS3 pour rendre mes sites modernes, responsives et esthétiques, notamment grâce à Flexbox et Grid.">
+    <div class="skill-card" data-key="css">
       <div class="icon"><i class="fa-brands fa-css3-alt"></i></div>
       <h3>CSS</h3>
       <p>Création d’interfaces modernes et responsives.</p>
       <div class="tooltip"></div>
     </div>
 
-    <div class="skill-card" data-key="js" data-info="Avec JavaScript, j’ajoute des interactions dynamiques : validation de formulaires, animations, et logique de navigation.">
+    <div class="skill-card" data-key="tailwind">
+         <div class="icon">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"alt="Tailwind CSS"style="width:48px; height:48px; color: #bb86fc;">
+        </div>
+      <h3>Tailwind CSS</h3>
+      <p>Framework CSS utilitaire et responsive.</p>
+      <div class="tooltip"></div>
+    </div>
+
+    <div class="skill-card" data-key="js">
       <div class="icon"><i class="fa-brands fa-js"></i></div>
       <h3>JavaScript</h3>
       <p>Interactions dynamiques et logique frontend.</p>
       <div class="tooltip"></div>
     </div>
 
-    <div class="skill-card" data-key="node" data-info="Node.js me permet de développer des serveurs et API rapides, notamment pour la partie backend de mes projets.">
+    <div class="skill-card" data-key="react">
+      <div class="icon"><i class="fa-brands fa-react"></i></div>
+      <h3>React</h3>
+      <p>Interfaces dynamiques basées sur des composants.</p>
+     <div class="tooltip"></div>
+    </div>
+
+   <div class="skill-card" data-key="nextjs">
+      <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
+      <h3>Next.js</h3>
+      <p>Framework React pour applications performantes.</p>
+      <div class="tooltip"></div>
+    </div>
+
+    <div class="skill-card" data-key="node">
       <div class="icon"><i class="fa-brands fa-node-js"></i></div>
       <h3>Node.js</h3>
       <p>Développement côté serveur rapide et flexible.</p>
       <div class="tooltip"></div>
     </div>
 
-    <div class="skill-card" data-key="git" 
-     data-info="J’utilise Git pour gérer les versions de mes projets, travailler avec des branches, fusionner du code et collaborer efficacement.">
-  <div class="icon"><i class="fa-brands fa-git-alt"></i></div>
-  <h3>Git</h3>
-  <p>Gestion de versions et travail collaboratif.</p>
-  <div class="tooltip"></div>
-</div>
+    <div class="skill-card" data-key="git">
+      <div class="icon"><i class="fa-brands fa-git-alt"></i></div>
+      <h3>Git</h3>
+      <p>Gestion de versions et travail collaboratif.</p>
+      <div class="tooltip"></div>
+    </div>
 
 
-    <div class="skill-card" data-key="github" data-info="J’utilise GitHub pour gérer mes projets, collaborer, et héberger le code source de mes applications.">
+    <div class="skill-card" data-key="github">
       <div class="icon"><i class="fa-brands fa-github"></i></div>
       <h3>GitHub</h3>
       <p>Versioning et hébergement de code source.</p>
       <div class="tooltip"></div>
     </div>
 
-    <div class="skill-card" data-key="render" data-info="Render me permet de déployer mes projets et mes sites statiques en ligne, gratuitement et facilement.">
+    <div class="skill-card" data-key="render">
       <div class="icon"><i class="fa-solid fa-cloud"></i></div>
       <h3>Render</h3>
       <p>Déploiement et hébergement en ligne.</p>
       <div class="tooltip"></div>
     </div>
 
-    <div class="skill-card" data-key="sqlite" data-info="SQLite est la base de données que je l'utilise pour les minis projets afin de les tester localement. ">
+    <div class="skill-card" data-key="sqlite">
       <div class="icon"><i class="fa-solid fa-database"></i></div>
       <h3>SQLite</h3>
       <p>Base de données légère et rapide.</p>
       <div class="tooltip"></div>
     </div>
 
-    <div class="skill-card" data-key="postgresql" 
-     data-info="PostgreSQL est la base de données que j’utilise pour gérer, requêter et structurer des données de manière fiable et performante.">
-  <div class="icon"><i class="fa-solid fa-database"></i></div>
-  <h3>PostgreSQL</h3>
-  <p>Base de données robuste et performante.</p>
-  <div class="tooltip"></div>
-</div>
+    <div class="skill-card" data-key="postgresql">
+      <div class="icon"><i class="fa-solid fa-database"></i></div>
+      <h3>PostgreSQL</h3>
+      <p>Base de données robuste et performante.</p>
+      <div class="tooltip"></div>
+    </div>
 
-    <div class="skill-card" data-key="c" data-info="Le langage C m’a permis de renforcer ma logique algorithmique et de mieux comprendre la gestion mémoire et le fonctionnement bas niveau des systèmes.">
+    <div class="skill-card" data-key="c">
       <div class="icon"><i class="fa-solid fa-code"></i></div>
       <h3>C</h3>
       <p>Langage bas niveau pour la logique et les performances.</p>
       <div class="tooltip"></div>
     </div>
-    <div class="skill-card" data-key="figma" data-info="J’utilise Figma pour concevoir des maquettes et prototyper l’interface de mes projets web avant le développement.">
+
+    <div class="skill-card" data-key="figma">
        <div class="icon"><i class="fa-brands fa-figma"></i></div>
         <h3>Figma</h3>
         <p>Conception d’interfaces et prototypage visuel.</p>

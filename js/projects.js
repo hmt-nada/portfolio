@@ -48,16 +48,14 @@ const projectsTexts = {
     bigtitle:"Mes Projets",
     qcmed: {
       name:"QCMed",
-      title: "Plateforme interactive de QCMs médicaux.",
-      role: '<strong>Rôle :</strong>Développement Full-Stack complet',
-      status: '<strong>Statut :</strong> En cours de réalisation/ Phase de test',
+      title: "Plateforme interactive de QCMs médicaux pour faciliter l’apprentissage et l’évaluation continue des étudiants en médecine.",
+      role: '<strong>Rôle :</strong>UI/UX Design et développement Full-Stack complet, de la conception de l’interface à l’implémentation des fonctionnalités et de la base de données',
       voir:"Voir le projet",
     },
     portfolio: {
        name:"Portfolio Personnel",
-      title: "Mon site web personnel avec un design moderne.",
-      role: '<strong>Rôle :</strong> Développement front-end complet',
-      status: '<strong>Statut :</strong> Terminé',
+      title: "Mon portfolio personnel, conçu pour présenter mes projets et compétences avec un design moderne et responsive, optimisé pour une navigation fluide.",
+      role: '<strong>Rôle :</strong> Développement front-end complet, design UX/UI et intégration responsive',
       voir:"Voir le projet",
     },
     
@@ -67,16 +65,14 @@ const projectsTexts = {
     bigtitle: "My Projects",
 qcmed: {
   name: "QCMed",
-  title: "Interactive platform for medical MCQs.",
-  role: "<strong>Role:</strong> Full-stack development",
-  status: "<strong>Status:</strong> In progress / Testing phase",
+  title: "Interactive platform of medical multiple-choice quizzes to facilitate learning and continuous assessment for medical students.",
+  role: "<strong>Role:</strong> Full-Stack development, database integration, and management of interactive features",
   voir: "View project",
 },
 portfolio: {
   name: "Personal Portfolio",
-  title: "My personal website with a modern design.",
-  role: "<strong>Role:</strong> Complete front-end development",
-  status: "<strong>Status:</strong> Completed",
+  title: "My personal portfolio, designed to showcase my projects and skills with a modern and responsive design, optimized for smooth navigation.",
+  role: "<strong>Role:</strong> Complete front-end development, UX/UI design, and responsive integration",
   voir: "View project",
 },
 
@@ -96,7 +92,6 @@ function setPROJECTSLanguage(lang) {
     card.querySelector(".name").textContent = projectsTexts[lang][key].name;
     card.querySelector(".domaine").textContent = projectsTexts[lang][key].title;
     card.querySelector(".role").innerHTML = projectsTexts[lang][key].role;
-    card.querySelector(".status").innerHTML = projectsTexts[lang][key].status;
     card.querySelector(".voir").textContent = projectsTexts[lang][key].voir;
   });
 

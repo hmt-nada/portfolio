@@ -1,14 +1,3 @@
-// Récupérer le thème sauvegardé
-const savedTheme = localStorage.getItem("theme");
-
-if (savedTheme === "light") {
-  document.body.classList.add("light-mode");
-  
-} else {
-  document.body.classList.remove("light-mode");
-  
-}
-document.querySelector('.theme-btn').style.visibility = "hidden";
 
 const barre = {
     fr: {
@@ -16,12 +5,14 @@ const barre = {
       navApropos: "À propos",
       navSkills: "Compétances",
       navproject: "Projets",
+      navcertificat: "Certificats",
     },
     en: {
       navAccueil: "Home",
       navApropos: "About",
       navSkills: "Skills",
       navproject: "Projects",
+      navcertificat: "Certificates",
     }
   };
 function setnavlinks(lang) {
@@ -29,6 +20,7 @@ function setnavlinks(lang) {
     document.querySelector('a[href="apropos.html"]').textContent = barre[lang].navApropos;
     document.querySelector('a[href="skills.html"]').textContent = barre[lang].navSkills;
     document.querySelector('a[href="projects.html"]').textContent = barre[lang].navproject;
+    document.querySelector('a[href="certificats.html"]').textContent = barre[lang].navcertificat;
     
   }
   const savedLang = localStorage.getItem("lang") || "fr";

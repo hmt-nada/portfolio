@@ -2,25 +2,25 @@ const skillsTexts = {
   fr: {
       bigtitle:"Mes Services",
     
-      intro: "J’aime transformer des idées en expériences numériques modernes.  Que ce soit pour un site vitrine, une plateforme complète ou un design interactif  ,je peux donner vie à votre projet de son début à sa fin.",
+      intro: "Je transforme vos idées en expériences numériques modernes et efficaces. Qu’il s’agisse d’un site vitrine, d’une plateforme complète ou d’un design interactif, je vous accompagne de la conception jusqu’à la mise en ligne.",
       
       design:{   
       title: "Design UI / UX",
-      text: " Création d’interfaces modernes et intuitives avec une attention particulière à l’expérience utilisateur.  Conception sur Figma, respect des tendances et identité visuelle unique.",
+      text: " Conception d’interfaces claires, modernes et centrées sur l’utilisateur, pensées pour être à la fois esthétiques et faciles à utiliser.",
        },
        front:{
       title:"Développement Front-End",
-      text:"Intégration responsive et dynamique avec HTML, CSS et JavaScript.  Je m’assure que chaque site soit fluide, esthétique et performant sur tous les écrans.",
+      text:"Création d’interfaces fluides et responsives, adaptées à tous les écrans et axées sur une expérience utilisateur agréable.",
       
        },
        back:{
       title:"Développement Back-End",
-      text:"Création de serveurs robustes avec Node.js et bases de données SQLite.  Gestion des utilisateurs, envoi d’e-mails et API sécurisées.",
+      text:"Mise en place de solutions fiables pour gérer les données, les utilisateurs et la logique métier d’une application.",
       
        },
        full:{
       title:"Développement Full-Stack",
-      text:" Du design au déploiement : je développe des sites web complets et fonctionnels.  Une maîtrise du front et du back pour des solutions personnalisées.",
+      text:" Accompagnement complet d’un projet web, de l’idée initiale à une solution fonctionnelle et évolutive.",
     
        },
       
@@ -30,23 +30,23 @@ const skillsTexts = {
   en: {
    bigtitle: "My Services",
 
-intro: "I love transforming ideas into modern digital experiences. Whether it’s a showcase website, a full platform, or interactive design, I can bring your project to life from start to finish.",
+intro: "I transform ideas into modern and efficient digital experiences. Whether it’s a showcase website, a complete platform, or an interactive design, I support your project from concept to deployment.",
 design:{
 title: "UI / UX Design",
-text: "Creating modern and intuitive interfaces with special attention to user experience. Designing on Figma, following trends and unique visual identity.",
+text: "Designing clean and modern interfaces with a strong focus on usability and user experience.",
 },
 front:{
 title: "Front-End Development",
-text: "Responsive and dynamic integration with HTML, CSS, and JavaScript. Ensuring each site is smooth, aesthetic, and performs well on all screens.",
+text: "Building smooth and responsive interfaces that work seamlessly across all devices.",
 },
 back:{
 
 title: "Back-End Development",
-text: "Creating robust servers with Node.js and SQLite databases. User management, email sending, and secure APIs.",
+text: "Developing reliable systems to handle data, users, and application logic efficiently.",
 },
 full:{
 title: "Full-Stack Development",
-text: "From design to deployment: I build complete and functional websites. Mastery of front and back for customized solutions."
+text: "Delivering complete web solutions, from concept to deployment, tailored to each project’s needs."
 },
     
   }

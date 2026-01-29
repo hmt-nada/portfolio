@@ -181,19 +181,7 @@ main {
   .certificat-card:hover .project-overlay {
     display: none !important;
   }
-  .contact-container {
-    flex-direction: column;
-    gap: 30px;
-    padding: 15px;
-    max-width: 100%;
-  }
-
-  .contact-form,
-  .contact-info {
-    width: 100%;
-    flex: 1 1 auto;
-    padding: 20px;
-  }
+  
   
 }
 
@@ -228,19 +216,7 @@ main {
     flex-direction: column;
     align-items: center;
   }
-.contact-container {
-    flex-direction: column;
-    gap: 30px;
-    padding: 15px;
-    max-width: 100%;
-  }
 
-  .contact-form,
-  .contact-info {
-    width: 100%;
-    flex: 1 1 auto;
-    padding: 20px;
-  }
 }
 /* Position du bouton */
 .lang-switch {

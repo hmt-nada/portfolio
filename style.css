@@ -178,6 +178,9 @@ main {
   .modal-content-cert img {
     max-height: none; /* permet au contenu de dépasser */
   }
+  .project-overlay {
+    display: none !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -203,6 +206,9 @@ main {
   .nav-links a {
     padding: 10px;
     text-align: center;
+  }
+  .project-overlay {
+    display: none !important;
   }
 }
 /* Position du bouton */
@@ -326,7 +332,7 @@ box-shadow: 0 0 30px rgba(187, 134, 252, 0.4);
 }
 /* Roles animés */
 #typing {
-  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   font-weight: 800;
   color: #ae79bc; /* rose doux qui ressort */
 }
@@ -522,7 +528,7 @@ box-shadow: 0 0 30px rgba(187, 134, 252, 0.4);
   min-height: 100vh;
 }
 .contact-background {
- padding: 1.5rem 5%;
+ padding: 1.5rem 7%;
   background: linear-gradient(120deg, #0a0a0a, #1b0033);
   min-height: 100vh;
 }
@@ -694,7 +700,7 @@ box-shadow: 0 0 30px rgba(187, 134, 252, 0.4);
 
 .project-card:hover .project-overlay, .certificat-card:hover .project-overlay  {
   bottom: 0;
-   transform: translateY(0);
+  transform: translateY(0);
   opacity: 1;
 }
 

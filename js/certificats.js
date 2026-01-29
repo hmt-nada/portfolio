@@ -65,7 +65,7 @@ const projectsTexts = {
     skillboost: {
       name: "SkillBoost – Django Training",
       title: "Hands-on training in web development with Django, completed during the SkillBoost event organized by the CSE scientific club. This training allowed me to learn the fundamentals of the Django framework, including web application development, database management, and backend feature implementation.",
-      role: "<strong>Skills gained:</strong> Django, Python, ORM, database management, backend development",
+      role: "<strong>Skills gained:</strong> Django, Python, database management, backend development",
     },
 
     esms: {

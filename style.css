@@ -178,7 +178,7 @@ main {
   .modal-content-cert img {
     max-height: none; /* permet au contenu de dépasser */
   }
-  .project-overlay {
+  .certificat-card:hover .project-overlay {
     display: none !important;
   }
 }
@@ -207,7 +207,7 @@ main {
     padding: 10px;
     text-align: center;
   }
-  .project-overlay {
+  .certificat-card:hover .project-overlay {
     display: none !important;
   }
 }

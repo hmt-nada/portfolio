@@ -181,6 +181,20 @@ main {
   .certificat-card:hover .project-overlay {
     display: none !important;
   }
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .contact-form,
+  .contact-info {
+    width: 100%;
+    flex: 1 1 auto;
+    padding: 20px;
+  }
+  
 }
 
 @media (max-width: 480px) {
@@ -209,6 +223,23 @@ main {
   }
   .certificat-card:hover .project-overlay {
     display: none !important;
+  }
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+.contact-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .contact-form,
+  .contact-info {
+    width: 100%;
+    flex: 1 1 auto;
+    padding: 20px;
   }
 }
 /* Position du bouton */
@@ -830,8 +861,7 @@ box-shadow: 0 0 30px rgba(187, 134, 252, 0.4);
   padding: 20px;
 }
 
-.contact-form,
-.contact-info {
+.contact-form, .contact-info {
   flex: 1 1 350px;
   background: #1a1a1a;
   padding: 30px;

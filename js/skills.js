@@ -152,18 +152,16 @@ const skillsTexts = {
 };
 
 function updateTooltips() {
+  const lang = localStorage.getItem("lang") || "fr";
   const cards = document.querySelectorAll(".skill-card");
-
   cards.forEach(card => {
     const key = card.dataset.key;
     const tooltip = card.querySelector(".tooltip");
-
-    if (tooltip) {
-      tooltip.textContent = skillsTexts[localStorage.getItem("lang")][key].popup;
+    if (tooltip && skillsTexts[lang] && skillsTexts[lang][key]) {
+      tooltip.textContent = skillsTexts[lang][key].popup;
     }
   });
 }
-
 
 function setSkillsLanguage(lang) {
   const cards = document.querySelectorAll(".skill-card");

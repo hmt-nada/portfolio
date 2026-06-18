@@ -283,7 +283,7 @@ main {
 /* ============================================================
    RESPONSIVE — TABLETTE / MOBILE (≤ 768px)
    ============================================================ */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   body {
     padding-top: 70px;
   }
@@ -294,15 +294,15 @@ main {
 
   .nav-links {
     display: none;
-    position: absolute;
-    top: 64px;
-    right: 0;
-    background-color: #1a001f;
+    position: fixed;
+    top: 65px;
+    left: 0;
     width: 100%;
     flex-direction: column;
+    background-color: #1a001f;
     text-align: center;
-    justify-content: center;
     padding: 1rem 0;
+    z-index: 999;
   }
 
   .nav-links.show {
@@ -316,9 +316,10 @@ main {
   }
 
   .burger {
-  display: flex;
-  z-index: 200;
-}
+    display: flex;
+    z-index: 1001;
+    position: relative;
+  }
 
   .certificats {
     padding: 1rem 6% 2.5rem;
@@ -340,13 +341,11 @@ main {
     transform: none;
   }
 
-  /* Tap pour afficher/cacher l'overlay sur mobile (classe .active via JS) */
   .overlay-eye-icon {
     top: 8px;
     left: 8px;
   }
 
-  /* Modal certificat : on garde le scroll vertical, pas horizontal */
   .modal-content-cert {
     max-width: 90vw;
     max-height: 90vh;
@@ -359,7 +358,6 @@ main {
     max-height: none;
   }
 }
-
 /* ============================================================
    RESPONSIVE — PETITS MOBILES (≤ 480px)
    ============================================================ */

@@ -178,7 +178,7 @@ main {
 /* ============================================================
    RESPONSIVE — TABLETTE / MOBILE (≤ 768px)
    ============================================================ */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   body {
     overflow: auto;
     padding-top: 70px;
@@ -190,15 +190,15 @@ main {
 
   .nav-links {
     display: none;
-    position: absolute;
-    top: 64px;
-    right: 0;
-    background-color: #1a001f;
+    position: fixed;
+    top: 65px;
+    left: 0;
     width: 100%;
     flex-direction: column;
+    background-color: #1a001f;
     text-align: center;
-    justify-content: center;
     padding: 1rem 0;
+    z-index: 999;
   }
 
   .nav-links.show {
@@ -208,13 +208,13 @@ main {
   .nav-links a {
     padding: 10px;
     font-size: 1.2rem;
-    text-align: center;
   }
 
   .burger {
-  display: flex;
-  z-index: 200;
-}
+    display: flex;
+    z-index: 1001;
+    position: relative;
+  }
 
   .content {
     min-height: auto;
@@ -234,10 +234,8 @@ main {
   .about-text {
     font-size: 1rem;
     line-height: 1.7;
-    text-align: left;
   }
 }
-
 /* ============================================================
    RESPONSIVE — PETITS MOBILES (≤ 480px)
    ============================================================ */

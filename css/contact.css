@@ -20,6 +20,10 @@ body {
   overflow: auto; /* page potentiellement plus longue que l'écran */
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -31,84 +35,10 @@ main {
 }
 
 /* ============================================================
-   NAVBAR
-   ============================================================ */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(90deg, #0a0a0a, #220033);
-  color: white;
-  padding: 1.5rem 1.5rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  box-shadow: 0 2px 10px rgba(187, 134, 252, 0.2);
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex: 1;
-  align-items: center;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  font-weight: 700;
-  font-size: 1.5rem;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: #bb86fc;
-}
-
-.right-section {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-left: auto;
-}
-
-/* --- Burger menu --- */
-.burger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  justify-content: space-between;
-  width: 25px;
-  height: 18px;
-}
-
-.burger div {
-  width: 100%;
-  height: 3px;
-  background-color: #bb86fc;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
-
-.burger.active .line1 {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.burger.active .line2 {
-  opacity: 0;
-}
-.burger.active .line3 {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* ============================================================
    SECTION CONTACT
    ============================================================ */
 .contact-background {
-  padding: 1.5rem 7% 3rem;
+  padding: 5rem 7% 3rem;
   background: linear-gradient(120deg, #0a0a0a, #1b0033);
   min-height: 100vh;
 }
@@ -420,14 +350,6 @@ main {
     padding: 0 0.5rem;
   }
 
-  .contact-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin: 30px auto;
-    padding: 10px;
-  }
-
   .contact-form,
   .contact-info {
     width: 100%;
@@ -447,10 +369,6 @@ main {
 @media (max-width: 480px) {
   body {
     padding-top: 60px;
-  }
-
-  .navbar {
-    padding: 0.8rem 1rem;
   }
 
   .section-title {

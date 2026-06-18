@@ -13,8 +13,22 @@
 function setLanguage(lang) {
     document.querySelector('.about-title').innerHTML = texts[lang].title;
     document.querySelector('.about-text').innerHTML = texts[lang].part1;
-     
+
   }
+
+  // --- Menu burger (une fois le navbar chargé) ---
+  document.addEventListener("navbarLoaded", () => {
+    const burger = document.querySelector(".burger");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (burger && navLinks) {
+      burger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+        burger.classList.toggle("active");
+      });
+    }
+  });
+
 document.addEventListener("DOMContentLoaded", () => {
   // --- Appliquer langue sauvegardée ou FR par défaut ---
   const savedLang = localStorage.getItem("lang") || "fr";

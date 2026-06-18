@@ -183,6 +183,18 @@ function setSkillsLanguage(lang) {
   updateTooltips();
 }
 
+  // --- Menu burger (une fois le navbar chargé) ---
+  document.addEventListener("navbarLoaded", () => {
+    const burger = document.querySelector(".burger");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (burger && navLinks) {
+      burger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+        burger.classList.toggle("active");
+      });
+    }
+  });
 
 document.addEventListener("DOMContentLoaded", () => {
   

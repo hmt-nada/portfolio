@@ -82,6 +82,19 @@ portfolio: {
   }
 };
 
+document.querySelectorAll(".project-card").forEach(card => {
+  card.addEventListener("click", (e) => {
+    // Ignore le clic si on a cliqué sur l'icône oeil, un lien ou un bouton
+    if (e.target.closest(".overlay-eye-icon") || e.target.closest("a")) return;
+
+    // Ferme les autres cartes ouvertes
+    document.querySelectorAll(".project-card.active").forEach(c => {
+      if (c !== card) c.classList.remove("active");
+    });
+
+    card.classList.toggle("active");
+  });
+});
 
 
 
@@ -100,7 +113,18 @@ function setPROJECTSLanguage(lang) {
   document.getElementById("bigtitle").textContent = projectsTexts[lang].bigtitle;
 }
 
+  // --- Menu burger (une fois le navbar chargé) ---
+  document.addEventListener("navbarLoaded", () => {
+    const burger = document.querySelector(".burger");
+    const navLinks = document.querySelector(".nav-links");
 
+    if (burger && navLinks) {
+      burger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+        burger.classList.toggle("active");
+      });
+    }
+  });
 
 document.addEventListener("DOMContentLoaded", () => {
   

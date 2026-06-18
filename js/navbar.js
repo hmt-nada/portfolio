@@ -50,13 +50,21 @@ document.addEventListener("navbarLoaded", () => {
 
   // --- Menu burger ---
   const burger = document.querySelector(".burger");
-  const navLinks = document.querySelector(".nav-links");
+const navLinks = document.querySelector(".nav-links");
 
-  if (burger && navLinks) {
-    burger.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
-      burger.classList.toggle("active");
-    });
+if (burger && navLinks) {
+  burger.style.touchAction = "manipulation";
+  burger.style.cursor = "pointer";
+  burger.style.webkitTapHighlightColor = "transparent";
+
+  function toggleMenu(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    navLinks.classList.toggle("show");
+    burger.classList.toggle("active");
   }
 
+  burger.addEventListener("touchstart", toggleMenu, { passive: false });
+  burger.addEventListener("click", toggleMenu);
+}
 });

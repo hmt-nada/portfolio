@@ -110,3 +110,41 @@ const cards = document.querySelectorAll(".certificat-card");
   });
 });
 
+/* ============================================================
+   À AJOUTER dans js/certificats.js (à la fin du fichier,
+   dans le même DOMContentLoaded ou juste après)
+   ------------------------------------------------------------
+   Gère l'affichage de l'overlay (.project-overlay) au TAP sur
+   mobile, puisque le :hover CSS ne fonctionne pas de façon
+   fiable au tactile. Un tap sur la carte ajoute/retire la
+   classe "active" ; un tap ailleurs referme l'overlay ouvert.
+   ============================================================ */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".certificat-card");
+
+  cards.forEach(card => {
+    card.addEventListener("click", (e) => {
+      // Si on clique sur l'icône oeil, le modal s'ouvre déjà via son propre
+      // listener (stopPropagation) : on ne touche pas à l'overlay dans ce cas.
+      if (e.target.closest(".overlay-eye-icon")) return;
+
+      const isActive = card.classList.contains("active");
+
+      // Ferme les autres cartes ouvertes
+      cards.forEach(c => c.classList.remove("active"));
+
+      // Rouvre celle-ci si elle n'était pas déjà active (toggle)
+      if (!isActive) {
+        card.classList.add("active");
+      }
+    });
+  });
+
+  // Tap en dehors d'une carte -> ferme l'overlay ouvert
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".certificat-card")) {
+      cards.forEach(c => c.classList.remove("active"));
+    }
+  });
+});

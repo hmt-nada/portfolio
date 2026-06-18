@@ -25,14 +25,16 @@ document.querySelectorAll(".overlay-eye-icon").forEach(icon => {
     modalImages.innerHTML = "";
 
     if(project === "qcmed") {
-      const imgs = ["images/qcmed-ouverture.png", "images/qcmed-inscription.png", "images/qcmed-accueil.png", "images/qcmed-cours.png", "images/qcmed-caracteristiques.png", "images/qcmed-qcm.png", "images/qcmed-qcmcorr.png", "images/qcmed-corrige.png"];
+      const imgs = ["images/qcmed-ouverture.png", "images/qcmed-inscription.png", "images/qcmed-accueil.png", "images/qcmed-faculty.png", "images/qcmed-cours.png", "images/qcmed-caracteristiques.png", "images/qcmed-qcm.png", "images/qcmed-qcmcorr.png", "images/qcmed-note.png", "images/qcmed-corrige.png"
+        , "images/qcmed-history.png", "images/qcmed-statistiques.png", "images/qcmed-favoris.png", "images/qcmed-manageprofile.png"
+      ];
       imgs.forEach(src => {
         const img = document.createElement("img");
         img.src = src;
         modalImages.appendChild(img);
       });
     } else if(project === "portfolio") {
-      const imgs = ["images/portfolio-accueil.png", "images/portfolio-about.png", "images/portfolio-skills.png", "images/portfolio-services.png", "images/portfolio-contact.png"];
+      const imgs = ["images/portfolio-accueil.png", "images/portfolio-about.png", "images/portfolio-skills.png", "images/portfolio-projects.png", "images/portfolio-contact.png"];
       imgs.forEach(src => {
         const img = document.createElement("img");
         img.src = src;

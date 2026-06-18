@@ -1,0 +1,358 @@
+/* ============================================================
+   CSS - Page Compétences (skills.html)
+   Classes extraites du HTML + JS :
+   navbar, nav-links, active, right-section, burger, line1, line2, line3,
+   skills-section, skills-grid, skill-card, icon, tooltip,
+   slide-left, slide-visible
+   ============================================================ */
+
+/* --- Reset / Base --- */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #0a0a0a;
+  color: white;
+  padding-top: 80px;
+  transition: background 0.3s, color 0.3s;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #0a0a0a, #220033);
+  color: white;
+  padding: 1.5rem 1.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(187, 134, 252, 0.2);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex: 1;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #bb86fc;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+/* --- Burger menu --- */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+}
+
+.burger div {
+  width: 100%;
+  height: 3px;
+  background-color: #bb86fc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.burger.active .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.active .line2 {
+  opacity: 0;
+}
+.burger.active .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ============================================================
+   SECTION COMPÉTENCES
+   ============================================================ */
+.skills-section {
+  padding: 5rem 8%;
+  background: linear-gradient(120deg, #0a0a0a, #220033);
+  color: white;
+  text-align: center;
+  min-height: calc(100vh - 80px);
+}
+
+.skills-section h3 {
+  font-size: 2.4rem;
+  color: #bb86fc;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(187, 134, 252, 0.3);
+  border-radius: 18px;
+  padding: 2.2rem 1.2rem;
+  width: 240px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 20px rgba(187, 134, 252, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: appear 0.8s forwards;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skill-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 35px rgba(187, 134, 252, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.skill-card .icon {
+  font-size: 3rem;
+  color: #bb86fc;
+  margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+  font-size: 1.3rem;
+  color: #e0e0e0;
+  margin-bottom: 0.6rem;
+}
+
+.skill-card p {
+  font-size: 0.95rem;
+  color: #c7c7c7;
+  line-height: 1.5;
+}
+
+/* --- Tooltip --- */
+.tooltip {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+
+  width: 200px;
+  padding: 0.9rem;
+  background: rgba(162, 111, 223, 0.927);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(187, 134, 252, 0.35);
+  border-radius: 14px;
+
+  color: #000000;
+  font-size: 0.85rem;
+  font-weight: bolder;
+  line-height: 1.4;
+  text-align: center;
+
+  box-shadow: 0 0 18px rgba(187, 134, 252, 0.35);
+
+  opacity: 0;
+  pointer-events: none;
+  z-index: 40;
+
+  transition: opacity 0.28s ease-out, transform 0.28s ease-out;
+}
+
+.skill-card:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0px);
+}
+
+/* ============================================================
+   ANIMATIONS D'APPARITION (titre)
+   ============================================================ */
+.slide-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================================
+   RESPONSIVE — TABLETTE / MOBILE (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .navbar {
+    padding: 1rem 1.2rem;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background-color: #1a001f;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .burger {
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+    z-index: 200;
+  }
+
+  .skills-section {
+    padding: 3rem 6%;
+    min-height: auto;
+  }
+
+  .skills-section h3 {
+    font-size: 1.9rem;
+    margin-top: 0 !important; /* annule le style inline -3rem du h3 */
+    margin-bottom: 2rem;
+  }
+
+  .skills-grid {
+    gap: 1.8rem;
+  }
+
+  .skill-card {
+    width: 100%;
+    max-width: 320px;
+    padding: 1.8rem 1rem;
+  }
+
+  /* Tooltip : on garde l'affichage au tap (hover sur mobile = tap) mais
+     on évite qu'elle dépasse de l'écran sur les bords */
+  .tooltip {
+    width: 85%;
+    max-width: 220px;
+    font-size: 0.8rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — PETITS MOBILES (≤ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  body {
+    padding-top: 60px;
+  }
+
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .skills-section {
+    padding: 2.5rem 5%;
+  }
+
+  .skills-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .skills-grid {
+    gap: 1.4rem;
+  }
+
+  .skill-card {
+    width: 100%;
+    max-width: 280px;
+    padding: 1.6rem 1rem;
+  }
+
+  .skill-card .icon {
+    font-size: 2.4rem;
+  }
+
+  .skill-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .skill-card p {
+    font-size: 0.88rem;
+  }
+
+  .nav-links a {
+    padding: 8px;
+    font-size: 1rem;
+  }
+}
+
+/* ============================================================
+   TRÈS PETITS ÉCRANS (≤ 360px)
+   ============================================================ */
+@media (max-width: 360px) {
+  .skill-card {
+    max-width: 100%;
+    padding: 1.4rem 0.8rem;
+  }
+
+  .skills-section h3 {
+    font-size: 1.3rem;
+  }
+}

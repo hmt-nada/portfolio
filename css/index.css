@@ -1,0 +1,419 @@
+/* ============================================================
+   CSS - Page d'accueil (index.html)
+   Classes extraites du HTML + JS :
+   navbar, nav-links, active, right-section, burger, line1, line2, line3,
+   content, image, slide-left, slide-right, intro, static, highlight-name,
+   cursor, lang-switch, lang-btn, lang-menu, hidden
+   ============================================================ */
+
+/* --- Reset / Base --- */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #0a0a0a;
+  color: white;
+  padding-top: 80px;
+  transition: background 0.3s, color 0.3s;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #0a0a0a, #220033);
+  color: white;
+  padding: 1.5rem 1.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(187, 134, 252, 0.2);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex: 1;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #bb86fc;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+/* --- Burger menu --- */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+}
+
+.burger div {
+  width: 100%;
+  height: 3px;
+  background-color: #bb86fc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.burger.active .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.active .line2 {
+  opacity: 0;
+}
+.burger.active .line3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ============================================================
+   CONTENU PRINCIPAL (hero)
+   ============================================================ */
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: -50px;
+  min-height: 90vh;
+  background: linear-gradient(120deg, #0a0a0a, #220033);
+  background-attachment: fixed;
+  color: white;
+}
+
+.image {
+  border-radius: 50%;
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+  box-shadow: 0 0 30px rgba(187, 134, 252, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+.intro {
+  max-width: 45%;
+}
+
+.intro h1 {
+  font-weight: 700;
+  color: #bb86fc;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.highlight-name {
+  text-shadow:
+    0 0 2px #8164a3,
+    0 0 10px #8164a3,
+    0 0 2px #8164a3;
+}
+
+.intro .static {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.6;
+  font-weight: 500;
+  color: #a0a0a0;
+  margin-right: 0.3rem;
+}
+
+#typing {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-weight: 800;
+  color: #ae79bc;
+}
+
+.cursor {
+  font-size: 1.5rem;
+  color: #bb86fc;
+  font-weight: 700;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+/* ============================================================
+   ANIMATIONS D'APPARITION (slide-left / slide-right)
+   ============================================================ */
+.slide-left,
+.slide-right {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide-left {
+  transform: translateX(-60px);
+}
+
+.slide-right {
+  transform: translateX(60px);
+}
+
+.slide-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================================
+   SÉLECTEUR DE LANGUE
+   ============================================================ */
+.lang-switch {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1000;
+}
+
+#lang-btn {
+  background-color: #bb86fc;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#lang-btn:hover {
+  background-color: white;
+  color: #bb86fc;
+  box-shadow: 0 2px 15px rgba(187, 134, 252, 0.5);
+}
+
+#lang-menu {
+  background-color: #bb86fc;
+  border-radius: 10px;
+  margin-top: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+#lang-menu button {
+  display: block;
+  background: none;
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 8px 12px;
+  text-align: right;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#lang-menu button:hover {
+  color: #bb86fc;
+  background-color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   RESPONSIVE — TABLETTE / MOBILE (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+    padding-top: 70px;
+  }
+
+  .navbar {
+    padding: 1rem 1.2rem;
+  }
+
+  /* Menu de navigation en liste déroulante */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background-color: #1a001f;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .burger {
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+    z-index: 200;
+  }
+
+  /* Hero : image au-dessus, texte en dessous, en colonne */
+  .content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0;
+    padding: 2.5rem 1.5rem;
+    min-height: auto;
+    gap: 1.5rem;
+  }
+
+  .intro {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .intro h1 {
+    margin: 0 auto;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .image {
+    width: 220px;
+    height: 220px;
+    margin-top: 0.5rem;
+  }
+
+  .lang-switch {
+    bottom: 15px;
+    left: 15px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE — PETITS MOBILES (≤ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  body {
+    padding-top: 60px;
+  }
+
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .content {
+    padding: 2rem 1rem;
+    gap: 1.2rem;
+  }
+
+  .intro h1 {
+    font-size: 1.6rem;
+    margin: 0 auto;
+    white-space: normal;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .intro {
+    text-align: center;
+  }
+
+  .intro .static {
+    font-size: 1.4rem;
+  }
+
+  #typing {
+    font-size: 1.2rem;
+  }
+
+  .image {
+    width: 180px;
+    height: 180px;
+    margin-top: 0.5rem;
+  }
+
+  .nav-links a {
+    padding: 8px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .lang-switch {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  #lang-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* ============================================================
+   TRÈS PETITS ÉCRANS (≤ 360px)
+   ============================================================ */
+@media (max-width: 360px) {
+  .image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .intro h1 {
+    font-size: 1.4rem;
+  }
+
+  .intro .static {
+    font-size: 1.1rem;
+  }
+
+  #typing {
+    font-size: 1rem;
+  }
+}

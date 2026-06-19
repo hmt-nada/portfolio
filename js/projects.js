@@ -40,6 +40,46 @@ document.querySelectorAll(".overlay-eye-icon").forEach(icon => {
         img.src = src;
         modalImages.appendChild(img);
       });
+    } else if(project === "ni3ma") {
+      const imgs = [
+       
+         // --- Onboarding ---
+        "images/ouverture.png",
+        "images/inscription.png",
+
+        // --- Espace Client ---
+        "images/inscription_Client.png",
+        "images/home_client.png",
+        "images/Offer_detail.png",
+        "images/favorite_offers.png",
+        "images/orders_client.png",
+        "images/history_client.png",
+        "images/statistics_client.png",
+        "images/Notification_client.png",
+
+        // --- Espace Commerçant ---
+        "images/inscription_merchant.png",
+        "images/merchant_home.png",
+        "images/Add_offer.png",
+        "images/merchant_Orders.png",
+        "images/merchant_History.png",
+        "images/merchant_Statistics.png",
+        "images/Notification_merchant.png",
+
+        // --- Espace Admin ---
+        "images/Admin_Dashboard.png",
+        "images/Merchants_Requests.png",
+        "images/offers_admin.png",
+        "images/orders_admin.png",
+        "images/users.png",
+        "images/statistics_admin.png",
+        "images/admin_Notifications.png",
+      ];
+      imgs.forEach(src => {
+        const img = document.createElement("img");
+        img.src = src;
+        modalImages.appendChild(img);
+      });
     }
     // ✅ Afficher le modal
     modal.style.display = "flex";
@@ -60,6 +100,12 @@ const projectsTexts = {
       role: '<strong>Rôle :</strong> Développement front-end complet, design UX/UI et intégration responsive',
       voir:"Voir le projet",
     },
+    ni3ma: {
+  name: "Ni3ma",
+  title: "Application mobile de lutte contre le gaspillage alimentaire connectant commerçants et clients pour valoriser les invendus à prix réduit.",
+  role: "<strong>Rôle :</strong> Développement d'une partie du backend, configuration de la base de données et de Firebase, intégration frontend-backend pour les espaces Client et Admin",
+  voir: "Voir le projet",
+},
     
   },
 
@@ -75,6 +121,12 @@ portfolio: {
   name: "Personal Portfolio",
   title: "My personal portfolio, designed to showcase my projects and skills with a modern and responsive design, optimized for smooth navigation.",
   role: "<strong>Role:</strong> Complete front-end development, UX/UI design, and responsive integration",
+  voir: "View project",
+},
+ni3ma: {
+  name: "Ni3ma",
+  title: "A mobile app fighting food waste by connecting merchants and customers, allowing unsold items to be sold at a reduced price.",
+  role: "<strong>Role:</strong> Backend development (partial), database and Firebase configuration, frontend-backend integration for the Client and Admin sections",
   voir: "View project",
 },
 

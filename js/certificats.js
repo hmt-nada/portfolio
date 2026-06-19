@@ -24,21 +24,19 @@ document.querySelectorAll(".overlay-eye-icon").forEach(icon => {
 
     modalImages.innerHTML = "";
 
-    if(project === "skillboost") {
-      const imgs = ["images/SKILLBOOST.png"];
-      imgs.forEach(src => {
-        const img = document.createElement("img");
-        img.src = src;
-        modalImages.appendChild(img);
-      });
-    } else if(project === "esms") {
-      const imgs = ["images/ESMS.png"];
-      imgs.forEach(src => {
-        const img = document.createElement("img");
-        img.src = src;
-        modalImages.appendChild(img);
-      });
-    }
+   const certImages = {
+  skillboost: ["images/SKILLBOOST.png"],
+  esms: ["images/ESMS.png"],
+  caa: ["images/CAA.png"]
+};
+
+if (certImages[project]) {
+  certImages[project].forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    modalImages.appendChild(img);
+  });
+}
     // ✅ Afficher le modal
     modal.style.display = "flex";
   });
@@ -56,6 +54,11 @@ const projectsTexts = {
       name: "ESMS – Team Collaboration Program",
       title: "Certificat de participation à l’événement ESMS organisé par le club scientifique CSE. Ce programme collaboratif d’une durée d’un mois simulait un environnement professionnel réel, où chaque participant occupait un rôle spécifique au sein d’un département. J’ai intégré le département développement et participé activement à la réalisation d’un projet en équipe.",
      role: "<strong>Compétences développées :</strong> Travail d’équipe, collaboration inter-départements, organisation de projet, développement web",
+    }, 
+    caa: {
+      name: "CAA – Technical Training Program",
+      title: "Certificat de participation à l'événement CSE Around Algeria organisé par le club scientifique CSE. Ce programme avait pour objectif de transmettre des compétences techniques à travers des formations animées par des intervenants spécialisés dans leurs domaines.",
+      role: "<strong>Compétences développées :</strong> Enseignement, communication technique, formation des utilisateurs",
     },   
   },
 
@@ -73,6 +76,11 @@ const projectsTexts = {
      title: "Certificate of participation in the ESMS event organized by the CSE scientific club. This one-month collaborative program simulated a real professional environment, where each participant held a specific role within a department. I was part of the development team and actively contributed to the realization of a team project.",
      role: "<strong>Skills developed:</strong> Teamwork, cross-department collaboration, project organization, web development",
     },   
+    caa: {
+      name: "CAA – Technical Training Program",
+      title: "Certificate of participation in the CSE Around Algeria event organized by the CSE scientific club. This program aimed to impart technical skills through training sessions led by experts in their respective fields.",
+      role: "<strong>Skills developed:</strong> Teaching, technical communication, user training",
+    },
   }
 };
 
